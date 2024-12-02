@@ -10,5 +10,19 @@ This year, I will try to solve all the problems in Java. I'm a bit experienced i
   For the similarity, I don't have to sort the input. I'm just going through the first column and then counting how many times the number appears in the second column.
 
   _Similarity answer: 25358365_
-  
+</details>
+
+<details>
+  <summary>Day 2</summary>
+
+  First, I wrote a simple `isSafe` method to check if a report is safe. There were two rules provided to check if a solution was safe.
+  - The levels are either all increasing or all decreasing.
+  - Any two adjacent levels differ by at least one and at most three.
+
+  _First answer: 269_
+
+  For the second challenge, I decided to loop over the amount of elements in each report and remove the level at that index.
+  For example: the report `[1,3,5]` will have three checks: `[3,5]`, `[1,5]` and `[1,3`. For each report, I'm using the original method to check if the new report is safe. When it is, I know only one level was broken, thus the rule is valid using the Problem Dampener.
+
+  _Second answer: 337_
 </details>
