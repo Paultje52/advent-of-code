@@ -1,7 +1,7 @@
 package day2;
 
-import java.nio.file.Files;
-import java.nio.file.Path;
+import adventofcode_2024.Util;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -50,7 +50,7 @@ public class Day2 {
      */
     private int[][] readInputForCheckSaveReports() throws Exception {
         // Read & split the file
-        String input = readFile("src/main/java/day2/input.txt");
+        String input = Util.readFile("src/main/java/day2/input.txt");
         String[] lines = input.split("\n");
 
         List<int[]> reports = new ArrayList<>();
@@ -70,16 +70,6 @@ public class Day2 {
         }
 
         return reports.toArray(new int[0][0]);
-    }
-
-    /**
-     * Read the file from the given path
-     * @param filePath The path to the file
-     * @return The content of the file
-     * @throws Exception If the file could not be read
-     */
-    public static String readFile(String filePath) throws Exception {
-        return Files.readString(Path.of(filePath));
     }
 
     /**

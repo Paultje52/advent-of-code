@@ -1,7 +1,7 @@
 package day1;
 
-import java.nio.file.Files;
-import java.nio.file.Path;
+import adventofcode_2024.Util;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -55,7 +55,7 @@ public class Day1 {
      */
     private int[][] readInputForDistance() throws Exception {
         // First, read the input.txt file
-        String input = readFile("src/main/java/day1/input.txt");
+        String input = Util.readFile("src/main/java/day1/input.txt");
 
         // Define the rows
         List<Integer> rowOne = new ArrayList<>();
@@ -95,16 +95,6 @@ public class Day1 {
         }
         // If the number is bigger than all the numbers in the list, add it at the end
         list.add(num);
-    }
-
-    /**
-     * Read the file from the given path
-     * @param filePath The path to the file
-     * @return The content of the file
-     * @throws Exception If the file could not be read
-     */
-    public static String readFile(String filePath) throws Exception {
-        return Files.readString(Path.of(filePath));
     }
 
     /**
@@ -149,7 +139,7 @@ public class Day1 {
      */
     private int[][] readInputForSimilarity() throws Exception {
         // First, read the input.txt file
-        String input = readFile("src/main/java/day1/input.txt");
+        String input = Util.readFile("src/main/java/day1/input.txt");
 
         // Define the rows
         List<Integer> rowOne = new ArrayList<>();

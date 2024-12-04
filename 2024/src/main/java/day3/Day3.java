@@ -1,7 +1,7 @@
 package day3;
 
-import java.nio.file.Files;
-import java.nio.file.Path;
+import adventofcode_2024.Util;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Matcher;
@@ -23,7 +23,7 @@ public class Day3 {
         String input;
 
         try {
-            input = readFile("src/main/java/day3/input.txt");
+            input = Util.readFile("src/main/java/day3/input.txt");
         } catch (Exception e) {
             System.out.println("Error reading file: " + e);
             return;
@@ -39,16 +39,6 @@ public class Day3 {
         }
 
         System.out.println("The result of the multiplications is: " + result);
-    }
-
-    /**
-     * Read the file from the given path
-     * @param filePath The path to the file
-     * @return The content of the file
-     * @throws Exception If the file could not be read
-     */
-    public static String readFile(String filePath) throws Exception {
-        return Files.readString(Path.of(filePath));
     }
 
     /**
@@ -89,7 +79,7 @@ public class Day3 {
         String input;
 
         try {
-            input = readFile("src/main/java/day3/input.txt");
+            input = Util.readFile("src/main/java/day3/input.txt");
         } catch (Exception e) {
             System.out.println("Error reading file: " + e);
             return;
